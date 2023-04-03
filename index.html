@@ -135,14 +135,33 @@ Me encuentro abierto a nuevas experiencias e intento mejorar constantemente en m
 
 
 <script>
-    var sites = ['blog1.html','blog2.html',
+    var sites = ['blog1.html','blog2.html', 'blog3.html', 'blog4.html'
     ];
     function randomSite() {
         var i = parseInt(Math.random() * sites.length);
         location.href = sites[i];
     }
+
 </script>
-  <p>Te invito a revisar una <a href="#" onclick="randomSite();"><u>publicación aleatoria</u> de mi blog.</a></p>
+
+  <p>Te invito a revisar una <a href="#" onclick="randomSite();"><u>publicación aleatoria</u> de mi blog. </a></p>
+
+
+    <p id="blogg"></p>
+    <script> 
+        var dictionary = [ 
+            {blogg: 'Un resumen en tres palabras del blog #1 por ChatGPT: Comenzar, pensamientos y economía.' }, 
+            {blogg: 'Un resumen en tres palabras del blog #2 por ChatGPT: Simetría en todo.' }, 
+            {blogg: 'Un resumen en tres palabras del blog #3 por ChatGPT: Bitcoin y desigualdad' }, 
+        ]; 
+        (function(){ 
+            var selection = dictionary[Math.floor(Math.random()*dictionary.length)]; 
+            for (var key in selection){ 
+                document.getElementById(key).innerHTML = selection[key]; 
+            } 
+            return; 
+        })(); 
+    </script> 
 
 
 </p>
@@ -178,6 +197,28 @@ Me encuentro abierto a nuevas experiencias e intento mejorar constantemente en m
             </div><!-- end title -->
 			
 			<div class="row">
+
+
+				<div class="col-md-4 col-sm-6 col-lg-4">
+					<div class="post-box">
+						<div class="post-thumb">
+							<img src="uploads/ai_img.jpg" class="img-fluid" alt="post-img" />
+							<div class="date">
+								<span>03</span>
+								<span>Abril</span>
+							</div>
+						</div>
+						<div class="post-info">
+		<h4><a href="blog4.html" target="_blank">Blog #4: Lo que la IA no podrá hacer</a> </h4>
+							<ul>
+                         <li>by Manuel <br>Abril 03, 2023</li>
+                            </ul>
+							<p>Abrazando el desarrollo y preparándose para el futuro.</p>
+						</div>
+					</div>
+				</div>
+
+
 				<div class="col-md-4 col-sm-6 col-lg-4">
 					<div class="post-box">
 						<div class="post-thumb">
@@ -219,24 +260,9 @@ Me encuentro abierto a nuevas experiencias e intento mejorar constantemente en m
 				</div>
 
 
-				<div class="col-md-4 col-sm-6 col-lg-4">
-					<div class="post-box">
-						<div class="post-thumb">
-							<img src="uploads/pnss.jpg" class="img-fluid" alt="post-img" />
-							<div class="date">
-								<span>06</span>
-								<span>Julio</span>
-							</div>
-						</div>
-						<div class="post-info">
-		<h4><a href="blog1.html" target="_blank">Blog #1: Sobre la escritura y los pensamientos</a> </h4>
-							<ul>
-                         <li>by Manuel <br>Julio 06, 2022</li>
-                            </ul>
-							<p>Redactando el primer blog.</p>
-						</div>
-					</div>
-				</div>
+
+
+
 <a onclick="window.open('blog_indice.html', '_blank')" class="sim-btn btn-hover-new" data-text="¡Vamos!"><span>¿Quieres ver más?</span></a>
 
 			</div>
